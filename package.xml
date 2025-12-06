@@ -27,6 +27,8 @@
     <depend>tf2_ros</depend>
     <depend>tf2_sensor_msgs</depend>
 
+    <depend>livox_ros_driver2</depend>
+
     <exec_depend>launch</exec_depend>
     <exec_depend>launch_ros</exec_depend>
 

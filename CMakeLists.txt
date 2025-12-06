@@ -22,6 +22,14 @@ ament_auto_add_executable(dummy_pointcloud_publisher
   src/dummy_pointcloud_publisher.cpp
 )
 
+ament_auto_add_library(livox_custom_msg_to_laserscan SHARED
+  src/livox_custom_msg_to_laserscan_node.cpp)
+
+rclcpp_components_register_node(livox_custom_msg_to_laserscan
+  PLUGIN "pointcloud_to_laserscan::LivoxCustomMsgToLaserScanNode"
+  EXECUTABLE livox_custom_msg_to_laserscan_node
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
